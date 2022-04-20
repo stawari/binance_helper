@@ -50,6 +50,7 @@ while True:
     #TODO viet thuat toan buy-sell
     direction = 'sell' if last_price > avg_price else 'buy'
     mark = '>' if direction == 'sell' else '<'
+    #direction = 'buy'
     print(f"lastprice: {last_price} {mark} avg: {avg_price} => {direction}")
     order = binance.create_market_order('BTC/USDT', direction, quantity)
     print(f'{direction} at price {last_price}')
@@ -62,3 +63,8 @@ while True:
 #TODO viet log to file + in ra
     #TODO don gian truoc
     #TODO ranh viet theo log luon
+    
+    
+    
+    if __name__ == '__main__':
+        
